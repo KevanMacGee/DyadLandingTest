@@ -2,13 +2,14 @@
 
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { User, Award, Users } from "lucide-react";
+import { User, Award, Users, Target } from "lucide-react";
 
 const About = () => {
   const stats = [
     { icon: <User className="h-8 w-8 text-blue-600" />, value: "15+", label: "Years Experience" },
     { icon: <Users className="h-8 w-8 text-blue-600" />, value: "500+", label: "Clients Served" },
-    { icon: <Award className="h-8 w-8 text-blue-600" />, value: "98%", label: "Client Retention" }
+    { icon: <Award className="h-8 w-8 text-blue-600" />, value: "98%", label: "Client Retention" },
+    { icon: <Target className="h-8 w-8 text-blue-600" />, value: "100%", label: "Success Rate" }
   ];
 
   return (
@@ -29,11 +30,32 @@ const About = () => {
                 To empower small businesses with accurate financial information and strategic insights that drive growth and success.
               </p>
             </div>
+            <div className="mt-8">
+              <h3 className="text-xl font-semibold text-gray-900">Our Values</h3>
+              <ul className="mt-2 space-y-2">
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 h-5 w-5 text-blue-600 mt-1">✓</div>
+                  <p className="ml-2 text-gray-600">Integrity in all financial matters</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 h-5 w-5 text-blue-600 mt-1">✓</div>
+                  <p className="ml-2 text-gray-600">Client-focused approach</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 h-5 w-5 text-blue-600 mt-1">✓</div>
+                  <p className="ml-2 text-gray-600">Continuous learning and improvement</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="flex-shrink-0 h-5 w-5 text-blue-600 mt-1">✓</div>
+                  <p className="ml-2 text-gray-600">Community involvement</p>
+                </li>
+              </ul>
+            </div>
           </div>
           <div>
             <Card className="bg-white shadow-lg">
               <CardContent className="p-8">
-                <div className="grid grid-cols-3 gap-6 text-center">
+                <div className="grid grid-cols-2 gap-6 text-center">
                   {stats.map((stat, index) => (
                     <div key={index} className="flex flex-col items-center">
                       <div className="mb-3">
