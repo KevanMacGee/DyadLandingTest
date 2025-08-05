@@ -4,8 +4,15 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-16 md:py-24">
+    <section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-16 md:py-24 mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
@@ -16,10 +23,10 @@ const Hero = () => {
               Trusted accounting services tailored to small businesses. Let us handle your finances while you focus on growing your business.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg" onClick={() => scrollToSection("contact")}>
                 Schedule Consultation
               </Button>
-              <Button variant="outline" className="px-8 py-3 text-lg border-blue-600 text-blue-600 hover:bg-blue-50">
+              <Button variant="outline" className="px-8 py-3 text-lg border-blue-600 text-blue-600 hover:bg-blue-50" onClick={() => scrollToSection("services")}>
                 Our Services
               </Button>
             </div>
