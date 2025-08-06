@@ -30,8 +30,6 @@ const Navbar = () => {
     }
   };
 
-  const textShadowClass = isScrolled ? "drop-shadow-[0_1px_1px_rgba(0,0,0,0.35)]" : "";
-
   return (
     <nav
       className={cn(
@@ -42,34 +40,34 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center transition-all">
-        <div className={cn("flex items-center", textShadowClass)}>
-          <div className={cn("bg-blue-600 text-white font-bold text-xl p-2 rounded mr-2", textShadowClass)}>AA</div>
-          <span className={cn("text-xl font-bold text-gray-800", textShadowClass)}>AccuCount Advisors</span>
+        <div className="flex items-center">
+          <div className="bg-blue-600 text-white font-bold text-xl p-2 rounded mr-2">AA</div>
+          <span className="text-xl font-bold text-gray-800">AccuCount Advisors</span>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
           <button
             onClick={() => scrollToSection("services")}
-            className={cn("text-gray-600 hover:text-blue-600 font-medium transition-colors", textShadowClass)}
+            className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
           >
             Services
           </button>
           <button
             onClick={() => scrollToSection("about")}
-            className={cn("text-gray-600 hover:text-blue-600 font-medium transition-colors", textShadowClass)}
+            className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
           >
             About
           </button>
           <button
             onClick={() => scrollToSection("testimonials")}
-            className={cn("text-gray-600 hover:text-blue-600 font-medium transition-colors", textShadowClass)}
+            className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
           >
             Testimonials
           </button>
           <button
             onClick={() => scrollToSection("contact")}
-            className={cn("text-gray-600 hover:text-blue-600 font-medium transition-colors", textShadowClass)}
+            className="text-gray-600 hover:text-blue-600 font-medium transition-colors"
           >
             Contact
           </button>
@@ -78,7 +76,7 @@ const Navbar = () => {
 
         {/* Mobile menu button */}
         <div className="md:hidden">
-          <Button variant="ghost" onClick={toggleMenu} size="icon" className={textShadowClass}>
+          <Button variant="ghost" onClick={toggleMenu} size="icon">
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
@@ -90,25 +88,25 @@ const Navbar = () => {
           <div className="flex flex-col space-y-4">
             <button
               onClick={() => scrollToSection("services")}
-              className={cn("text-gray-600 hover:text-blue-600 font-medium text-left transition-colors", textShadowClass)}
+              className="text-gray-600 hover:text-blue-600 font-medium text-left transition-colors"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className={cn("text-gray-600 hover:text-blue-600 font-medium text-left transition-colors", textShadowClass)}
+              className="text-gray-600 hover:text-blue-600 font-medium text-left transition-colors"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("testimonials")}
-              className={cn("text-gray-600 hover:text-blue-600 font-medium text-left transition-colors", textShadowClass)}
+              className="text-gray-600 hover:text-blue-600 font-medium text-left transition-colors"
             >
               Testimonials
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className={cn("text-gray-600 hover:text-blue-600 font-medium text-left transition-colors", textShadowClass)}
+              className="text-gray-600 hover:text-blue-600 font-medium text-left transition-colors"
             >
               Contact
             </button>
